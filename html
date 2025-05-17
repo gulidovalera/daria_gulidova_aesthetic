@@ -1,11 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ @daria_gulidova_aesthetic
+  <title>Массажные практики</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #faf7e9;
+      color: #5c4033;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right, #d9c8a7, #a68b5e);
+      opacity: 0.8;
+    }
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(to bottom, #f0e4c7, #d9c8a7);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" opacity="0.1"><path fill="none" stroke="%23ffffff" stroke-width="10" d="M0,200 C200,100 400,300 600,150 C800,50 1000,250 1000,250" /></svg>');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+    .hero h1, .hero p {
+      font-family: 'Playfair Display', serif;
+      position: relative;
+      z-index: 1;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 2px;
+      background: #ffffff;
+      opacity: 0.7;
+    }
+    .price {
+      background: linear-gradient(to right, #d9c8a7, #a68b5e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cta-button {
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #a68b5e;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-    
+  <!-- Header -->
+  <header class="hero py-24 text-center text-white">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">Массажные практики</h1>
+    <p class="text-xl md:text-2xl mb-6">Погрузитесь в мир релакса и исцеления</p>
+    <p class="text-base max-w-2xl mx-auto">Откройте для себя уникальные техники, созданные для гармонии тела и души. Каждая практика — это шаг к внутреннему балансу и здоровью.</p>
+  </header>
+
+  <!-- Welcome Section -->
+  <section class="py-16 px-4 md:px-8 bg-[#f0e4c7]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-['Playfair_Display'] mb-6">Добро пожаловать в мир гармонии</h2>
+      <p class="text-base leading-relaxed mb-4">Я верю, что массаж — это не просто процедура, а искусство, которое восстанавливает энергию, снимает стресс и возвращает радость жизни.</p>
+      <p class="text-base leading-relaxed">Каждый сеанс проводится в атмосфере уюта и заботы, с использованием натуральных масел и инструментов, подобранных с любовью. Позвольте мне позаботиться о вашем теле и душе!</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-['Playfair_Display'] text-center mb-12"> Практики</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- Service 1 -->
+        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
+          <img src="https://via.placeholder.com/300x200?text=Исцеляющий+огонь" alt="Практика исцеляющего огня" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 font-['Playfair_Display']">Практика исцеляющего огня</h3>
+            <p class="text-sm mb-4 leading-relaxed">Уникальная техника, использующая тепло и энергию для глубокого расслабления, восстановления баланса и снятия напряжения. Идеально подходит для тех, кто ищет внутреннюю гармонию.</p>
+            <p class="text-lg font-bold price">150 ₽</p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
+          <img src="https://via.placeholder.com/300x200?text=Тибетская+чаша" alt="Вибрационно-акустическая практика" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 font-['Playfair_Display']">Вибрационно-акустическая практика</h3>
+            <p class="text-sm mb-4 leading-relaxed">Гармонизация тела и разума с помощью вибраций тибетской поющей чаши. Эта практика снимает стресс, улучшает энергетику и дарит глубокое спокойствие.</p>
+            <p class="text-lg font-bold price">1 сеанс: 70 ₽<br>3 сеанса: 190 ₽</p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
+          <img src="https://via.placeholder.com/300x200?text=Кисточковая+релаксация" alt="Кисточковая релаксация" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 font-['Playfair_Display']">Кисточковая релаксация</h3>
+            <p class="text-sm mb-4 leading-relaxed">Нежные прикосновения кисточек создают ощущение легкости, снимают стресс и дарят полное расслабление. Подходит для тех, кто хочет отдохнуть от суеты.</p>
+            <p class="text-lg font-bold price">90 ₽</p>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
+          <div class="relative">
+            <img src="https://via.placeholder.com/300x200?text=Ток+Сен" alt="Тайская практика Ток Сен" class="w-full h-48 object-cover">
+            <div class="absolute top-0 right-0 bg-[#a68b5e] text-white text-xs font-semibold px-2 py-1 rounded-bl-lg">Традиция</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 font-['Playfair_Display']">Тайская практика Ток Сен</h3>
+            <p class="text-sm mb-4 leading-relaxed">Традиционная тайская техника с использованием деревянных инструментов для стимуляции энергетических каналов, снятия мышечного напряжения и восстановления жизненной энергии.</p>
+            <p class="text-lg font-bold price">100 ₽</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach Section -->
+  <section class="py-16 px-4 md:px-8 bg-[#faf7e9]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-['Playfair_Display'] mb-6">Мой подход</h2>
+      <p class="text-base leading-relaxed mb-4">Каждая практика — это путешествие к внутреннему покою. Я создаю индивидуальный опыт, учитывая ваши потребности и желания.</p>
+      <p class="text-base leading-relaxed">Моя миссия — помочь вам обрести гармонию, здоровье и радость через искусство массажа.</p>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="py-16 px-4 md:px-8 bg-[#d9c8a7] text-center">
+    <h2 class="text-3xl font-['Playfair_Display'] mb-6">Готовы к релаксу?</h2>
+    <p class="text-base max-w-2xl mx-auto mb-8">Запишитесь на сеанс и откройте для себя магию наших массажных практик. Позвольте мне позаботиться о вашем теле и душе уже сегодня!</p>
+    <a href="https://www.instagram.com/daria_gulidova_aesthetic/?hl=ru" target="_blank" class="cta-button inline-block bg-[#5c4033] text-white font-semibold py-3 px-8 rounded-lg">Записаться</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#5c4033] text-white py-10 text-center">
+    <p class="text-sm">© 2025 Массажные практики. Все права защищены.</p>
+    <p class="text-xs mt-2 opacity-75">Создано с заботой о вашем здоровье и гармонии</p>
+  </footer>
 </body>
 </html>
